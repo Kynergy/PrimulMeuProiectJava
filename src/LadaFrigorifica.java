@@ -7,6 +7,6 @@ public class LadaFrigorifica extends Congelator{
         this.putere = putere;
     }
     public void afisare(){
-        System.out.println("Lada frigorifica cu capacitatea de: " + capacitate + "produsa de" + producator + "are pretul:" + pret + " ,puterea de: " + putere + " si temperatura minima de: " + temp);
+        System.out.println("Lada frigorifica cu capacitatea de: " + capacitate + " produsa de " + producator + " are pretul: " + pret + " ,puterea de: " + putere + " si temperatura minima de: " + temp);
     }
 }

@@ -1,5 +1,3 @@
-import java.nio.file.FileSystemNotFoundException;
-
 public class AparatFrigorific {
     int capacitate;
     String producator;
@@ -26,7 +24,7 @@ public class AparatFrigorific {
         this.producator = producator;
     }
 
-    public int getPret() {
+    public int getPret(AparatFrigorific aparat) {
         return pret;
     }
 
@@ -43,5 +41,9 @@ public class AparatFrigorific {
     public void afisare(){
         System.out.println("Aparat frigorific cu capacitatea de: " + capacitate + "l" + ", produs de: " + producator + " si cu pretul de: " + pret + " lei");
 
+    }
+
+    public int getPret() {
+        return 0;
     }
 }

@@ -7,7 +7,7 @@ public class Frigider extends AparatFrigorific {
     }
 
     public void afisare() {
-        System.out.println("Frigider cu capacitatea de: " + capacitate + "l" + ", produs de: " + producator + " si cu pretul de: " + pret + " lei" + " are: " + rafturi + "rafturi");
+        System.out.println("Frigider cu capacitatea de: " + capacitate + "l" + ", produs de: " + producator + " si cu pretul de: " + pret + " lei" + " are: " + rafturi + " rafturi");
     }
 }
 
