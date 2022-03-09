@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,12 +18,14 @@ public class Main {
 
         prezentareLista(aparate);
         PretMediu(aparate);
-        //CapacitatMedie(aparate);
-        AfiseazaPret(aparate);
+        CapacitateMedie(aparate);
+        //AfiseazaPret(aparate);
+         //Putere(aparate);
 
         System.out.println();
         System.out.println("Numarul lazilor frigorifice din lista este : " + numar(aparate));
         System.out.println("Numarul frigiderelor din lista este : " + numar2(aparate));
+        // System.out.println("Puterea mai mare d " + Putere(aparate));
 
 
     }
@@ -56,87 +57,73 @@ public class Main {
         return n;
     }
 
-    public static int PretMediu(ArrayList<AparatFrigorific> aparate) {
-        int sum = 0;
+    public static double PretMediu(ArrayList<AparatFrigorific> aparate) {
+        double sum = 0;
 
         for (var aparat : aparate) {
-            sum += aparat.getPret(aparat);
+            sum += aparat.pret;
+
 
         }
-        int avg = sum / aparate.size();
+        double avg = sum / aparate.size();
         System.out.println("Media Preturilor aparatelor este: " + avg);
 
-        return sum;
+        return avg;
     }
 
-   /* public static ArrayList<AparatFrigorific>CapacitatMedie(ArrayList<AparatFrigorific>aparate){
-        Set<Class<?>> capacitate = new HashSet<>();
-        ArrayList<AparatFrigorific> finala = new ArrayList<>();
-        for(var aparat :aparate){
-            capacitate.add(aparat.getClass());
-        }
-        for(var x:capacitate){
-           AparatFrigorific rez = null;
-            int total = 0;
-          // int capacitate = 0;
-           for(var aparat:aparate){
-               if ((aparat.getClass() == x)) && (total += aparat.getCapacitate()))){
-                   total += aparat.getCapacitate();
-                   rez = aparat;
-               }
-               int avg = total / aparate.size();
-           }
-            finala.add(rez);
-        }
-        return finala;
-    }
-    }
-    */
-   /*public static int CapacitateMedie (ArrayList<AparatFrigorific> aparate) {
-       int total = 0;
+  /* public static ArrayList<AparatFrigorific> AfiseazaPret(ArrayList<AparatFrigorific>aparate){
 
-       for (var aparat : aparate) {
-           total += aparat.getCapacitate(aparat);
+         int z, y;
+         Scanner myObj = new Scanner(System.in);
+         System.out.println("Introduceti primul pret: ");
+         z = myObj.nextInt();
 
-       }
-       int avg = total / aparate.size();
-       System.out.println("Capacitatea medie a aparatelor aparatelor este: " + avg);
+         System.out.println("Introduceti cel de-al doilea pret: ");
+         y = myObj.nextInt();
+         int intervalPret = new HashSet<>();
+         ArrayList<AparatFrigorific>finala = new ArrayList<>();
+         for (var aparat : aparate) {
 
-       return total;
-   }
-}*/
+         }
+         for (var i :intervalPret) {
 
-    public static ArrayList<AparatFrigorific> AfiseazaPret(ArrayList<AparatFrigorific>aparate){
+             AparatFrigorific rez = null;
+             int rezultat = rez.getPret();
 
-        int y, z;
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Introduceti primul pret: ");
-        z = myObj.nextInt();
+             for (var aparat : aparate) {
+                 if (aparate.getClass() == i && (rezultat >= z) && (rezultat <= y)) {
+                     rez = aparat;
+                     intervalPret = aparat.pret;
+                 }
+             }
+             finala.add(rez);
+         }
+         return finala;
 
-        System.out.println("Introduceti cel de-al doilea pret: ");
-        y = myObj.nextInt();
-        Set <Class<?>> intervalPret = new HashSet<>();
-        ArrayList<AparatFrigorific>finala = new ArrayList<>();
-        for (var i : intervalPret) {
-            intervalPret.add(aparate.getClass());
-        }
-        for (var i :intervalPret){
-
-            AparatFrigorific aparat = null;
-            int rezultat = aparat.getClass();
-            if ((rezultat >= z) && (rezultat <= y)) {
-                aparat = aparat;
-                intervalPret = aparat.pret();
-                return rezultat;
+     }*/
+  /* public static int Putere (ArrayList<LadaFrigorifica> aparate){
+        int a =0;
+        for (var aparat:aparate){
+            if(aparat.getClass() == LadaFrigorifica.class){
+                return a++;
             }
         }
-        finala.add(aparat);
+        return a;
+    }*/
+
+    public static void CapacitateMedie(ArrayList<AparatFrigorific> aparate) {
+        double sum = 0;
+
+        for (var aparat : aparate) {
+            sum += aparat.capacitate;
+
+
+        }
+        double avg = sum / aparate.size();
+        System.out.println("Capacitatea medie a aparatelor este: " + avg);
+
     }
-
-
-
 }
-
 
 
 
